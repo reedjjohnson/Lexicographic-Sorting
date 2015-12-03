@@ -1,4 +1,5 @@
 def sorting(words, order):
+    #create dictionaries that relate each character with its position in order and vice-versa
     order_dict = {}
     reverse_dict = {}
     for i in range(0,len(order)):
@@ -10,7 +11,8 @@ def sorting(words, order):
     sorted_words = convert_to_letters(sorted_numbers, reverse_dict) 
     return sorted_words
     
-    
+#Converts the words array into easily sorted strings 
+# of numbers that show the position of each letter in the order string
 def convert_to_numbers(words, order_dict):
     number_words = []
     for i in range(0, len(words)):
@@ -23,7 +25,7 @@ def convert_to_numbers(words, order_dict):
         
     return number_words
 
-
+#Converts each number string back into the original string
 def convert_to_letters(sorted_numbers, reverse_dict):
     sorted_words = []
     for i in range(0, len(sorted_numbers)):
